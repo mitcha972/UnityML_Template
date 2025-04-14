@@ -1,32 +1,57 @@
 # 🧠 Unity ML Template
 
-![Unity ML](https://www.gocoder.one/static/ultimate-volleyball-eb08a31356cf6a5add9ad2b3ec76cfc6.gif) <!-- You can update this gif if you want a more general one -->
 
-## About
+## Overview
 
-**Unity ML Template** is a clean, customizable starting point for building machine learning environments using [Unity ML-Agents](https://unity.com/products/machine-learning-agents). Whether you're prototyping a new environment, training agents for a custom simulation, or teaching reinforcement learning, this template offers a ready-to-use Unity project structure, integrated ML-Agents setup, and helpful baseline components.
+**Unity ML Template** is a clean and customizable starting point for building machine learning environments using [Unity ML-Agents](https://unity.com/products/machine-learning-agents). Whether you're prototyping a new environment, training agents in a custom simulation, or exploring reinforcement learning, this template provides a ready-to-use Unity project structure, integrated ML-Agents setup, and helpful baseline components.
 
-> **Version:** Compatible with ML-Agents Release 19+
+> **Compatible with ML-Agents Release 19+**
 
-## Contents
-1. [Getting Started](#getting-started)
-2. [Training Agents](#training-agents)
-3. [Self-Play Setup](#self-play-setup)
-4. [Environment Configuration](#environment-configuration)
-5. [Included Baselines](#included-baselines)
+## Table of Contents
+
+1. [Getting Started](#getting-started)  
+2. [Environment Setup](#environment-setup)  
+3. [Training Agents](#training-agents)
+
+---
 
 ## Getting Started
 
-1. Install the [Unity ML-Agents toolkit](https://github.com/Unity-Technologies/ml-agents) (Release 19 or later).
+1. Install the [Unity ML-Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) (Release 19 or later).
 2. Clone or download this repository.
-3. Open the Unity project (Unity Hub → Projects → Add → select the root folder).
-4. Open your environment scene or use the included example (`VolleyballMain.unity`) as a starting point.
-5. Hit ▶️ in the Unity Editor to run the agent in inference mode.
+3. Open the Unity project via Unity Hub:  
+   `Unity Hub → Projects → Add → Select the root folder`.
+4. Set up a Python virtual environment (3.10):  
+   ```bash
+   python3.10 -m venv venv
+   ```
+5. Activate the Env 
+   ```bash
+   \venv\Scripts\activate
+   ```
+6. Install the required Python packages:  
+   Follow the installation guide here:  
+   https://unity-technologies.github.io/ml-agents/Installation/
+
+---
+
+## Environment Setup
+
+- Open Unity and load the project.
+- Make sure ML-Agents package is properly imported.
+- Check `Project Settings → Player → API Compatibility Level` and ensure it's compatible with ML-Agents.
+
+---
 
 ## Training Agents
 
-1. Activate your virtual environment with `ml-agents` installed.
-2. Copy or create a YAML config file for training (see `config/` directory for examples).
-3. Start training:  
+1. Activate your virtual environment (where `ml-agents` is installed).
+2. Create or modify a YAML config file for training (see the `config/` folder for examples).
+3. Run the training command:  
    ```bash
    mlagents-learn <path-to-config> --run-id=<your_run_id> --time-scale=1
+   ```
+
+---
+
+Let me know if you want to include a section on inference, deploying trained models, or contributing!
