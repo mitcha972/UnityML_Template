@@ -48,7 +48,7 @@
 ---
 
 ## Environment Setup
-
+https://unity-technologies.github.io/ml-agents/Getting-Started/
 - Open Unity and load the project.
 - Make sure ML-Agents package is properly imported.
 
@@ -61,8 +61,10 @@
 3. Run the training command:  
    ```bash
    mlagents-learn <path-to-config> --run-id=<your_run_id> --time-scale=1
+   mlagents-learn config\ppo\<file-name>.yaml --run-id=<your_run_id> --time-scale=1
    ```
 4. You can rerive the training data after by running commad
    ```bash
    tensorboard --logdir results/your_run_id
    ```
+   https://unity-technologies.github.io/ml-agents/Learning-Environment-Examples/
