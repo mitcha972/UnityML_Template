@@ -29,7 +29,19 @@
    ```bash
    \venv\Scripts\activate
    ```
-6. Install the required Python packages:  
+6. Add PyTorch Package
+   ```bash
+   pip3 install torch~=2.2.1 --index-url https://download.pytorch.org/whl/cu121
+   ```
+7. Add PyTorch Package
+   ```bash
+   python -m pip install mlagents==1.1.0
+   ```
+8. Add PyTorch Package
+   ```bash
+   pip install tensorboard
+   ```
+9. Check the required Python packages:  
    Follow the installation guide here:  
    https://unity-technologies.github.io/ml-agents/Installation/
 
@@ -39,7 +51,6 @@
 
 - Open Unity and load the project.
 - Make sure ML-Agents package is properly imported.
-- Check `Project Settings → Player → API Compatibility Level` and ensure it's compatible with ML-Agents.
 
 ---
 
@@ -51,7 +62,7 @@
    ```bash
    mlagents-learn <path-to-config> --run-id=<your_run_id> --time-scale=1
    ```
-
----
-
-Let me know if you want to include a section on inference, deploying trained models, or contributing!
+4. You can rerive the training data after by running commad
+   ```bash
+   tensorboard --logdir results/your_run_id
+   ```
