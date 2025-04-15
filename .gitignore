@@ -12,8 +12,10 @@
 /[Aa]ssets/ML-Agents/Timers/
 /[Uu]serSettings/
 /[Rr]ecordings/
-/[Rr]esults/
+#/[Rr]esults/
 /[Aa]ssets/[Pp]refabs/OldPrefabs
+/[Pp]rojectSettings/
+/[Pp]ackages/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
